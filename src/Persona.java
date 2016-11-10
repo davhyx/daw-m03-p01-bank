@@ -1,0 +1,5 @@
+/**
+ * Persona
+ */
+public class Persona {
+}

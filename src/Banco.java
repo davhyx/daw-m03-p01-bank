@@ -1,0 +1,5 @@
+/**
+ * Banco
+ */
+public class Banco {
+}
