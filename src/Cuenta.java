@@ -1,5 +1,5 @@
 
-public class Cuenta {
+public abstract class Cuenta {
 
     public String numCuenta;
     private Number pin;
