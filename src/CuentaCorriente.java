@@ -1,6 +1,5 @@
 
-public class CuentaCorriente {
-
+public class CuentaCorriente implements Corriente{
 
 
 }

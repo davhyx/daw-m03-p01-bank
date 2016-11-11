@@ -2,30 +2,20 @@
 public class Cuenta {
 
     public String numCuenta;
-    private Number pin;
-    public Number saldo;
+    //private Number pin;
+    private int dinero;
 
-    public String getNumCuenta() {
-        return numCuenta;
+    public void Ponerdinero(int din){
+        dinero=dinero+din;
     }
 
-    public void setNumCuenta(String numCuenta) {
-        this.numCuenta = numCuenta;
+    /*public void MostrarDinero(){
+        System.out.println(numCuenta+"="+dinero+"Euros");
+    }*/
+
+    @override
+    public String toString(){
+        return super.toString
     }
 
-    public Number getPin() {
-        return pin;
-    }
-
-    public void setPin(Number pin) {
-        this.pin = pin;
-    }
-
-    public Number getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(Number saldo) {
-        this.saldo = saldo;
-    }
 }
