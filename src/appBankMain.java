@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -12,9 +13,21 @@ public class appBankMain {
         
         Scanner input = new Scanner(System.in).useDelimiter("\n");
         String numCuenta;
-        String nombreCliente;
+        String nifCliente;
         String tipoCuenta;
-        float valor;
+
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+
+        clientes.add(new Cliente ("David", "nifDavid"));
+        clientes.add(new Cliente ("Juanjo", "nifJuanjo"));
+        clientes.add(new Cliente ("Victor", "nifVictor"));
+
+
+        ArrayList<Cuenta> cuentas = new ArrayList<Cuenta>();
+        cuentas.add(new CuentaCorriente ("1", "nifDavid", 100));
+        cuentas.add(new CuentaAhorro ("2", "nifJuanjo", 200));
+        cuentas.add(new CuentaCorriente ("3", "nifVictor", 300));
+
 
         int opcion0;
         
@@ -36,13 +49,21 @@ public class appBankMain {
                 //1 - Ver saldo en cuenta:
                 case 1:
 
+                    int index1 = -1;
                     System.out.println("#######  VER SALDO  #######");
                     System.out.println("Introduzca el numero de cuenta:");
-                    numCuenta = input.nextInt();
+                    numCuenta = input.next();
 
                     /*Llamamos al metodo verSaldo de Cuenta, mediante polimorfismo nos mostrará
                     el saldo del tipo de cuenta que sea CA/CC sin pasarlo explicitamente. */
-                    //numCuenta.verSaldo();
+
+                    for (int i = 0; i < cuentas.size(); i++) {
+                        if (numCuenta.equals(cuentas.get(i).getNumCuenta())) {
+                            index1 = i;
+                        }
+                    }
+
+                    System.out.println(cuentas.get(index1).getSaldo());
 
                     break;
                 case 2:
@@ -57,16 +78,18 @@ public class appBankMain {
                     System.out.print("Introduzca el número de cuenta: ");
                     numCuenta = input.next();
 
-                    System.out.print("Nombre del titular: ");
-                    nombreCliente = input.next();
+                    System.out.print("DNI del titular: ");
+                    nifCliente = input.next();
 
                     System.out.print("Tipo de cuenta: ");
                     tipoCuenta = input.next();
 
                     if(tipoCuenta == "CA"){
-                        ct1 = new CuentaAhorro(numCuenta, nombreCliente);
+                        //ct1 = new CuentaAhorro(numCuenta, nifCliente);
+                        System.out.println("CuentaAhorro creada num:" + numCuenta  + " titular: " + nifCliente);
                     } else {
-                        ct1 = new CuentaCorriente(numCuenta, nombreCliente);
+                        //ct1 = new CuentaCorriente(numCuenta, nifCliente);
+                        System.out.println("CuentaCorriente creada num:" + numCuenta  + " titular: " + nifCliente);
                     }
 
                     break;
