@@ -30,19 +30,21 @@ public class Cliente {
     }
     */
 
-    public CrearCuenta(String numeroCuenta){ //Metodo Crear Cuenta le pasas el numero de Cuenta
+    public CrearCuenta(String numeroCuenta, String nif){ //Metodo Crear Cuenta le pasas el numero de Cuenta y el titular
       this.numeroCuenta = numeroCuenta;
-      cuentas.add(numeroCuenta); //Le añades a la ARRAyLIST cuentas la cuenta
+      this.nif = nif;
+      cuentas.add(numeroCuenta,nif); //Le añades a la ARRAyLIST cuentas la cuenta y el titular
     }
 
     public BajaCuenta(String numeroCuenta){ //Metodo BajaCuenta le pasas la cuenta
       this.numeroCuenta = numeroCuenta;
-      cuentas.remove(numeroCuenta);//Eliminar
+      this.nif = nif;
+      cuentas.remove(numeroCuenta,nif);//Eliminar
     }
 
     public VerCuenta(String nombre){ //Metodo VerCuenta le pasas el nombre del cliente
       this.nombre = nombre;
-      return (numeroCuenta && saldo); //Te devuelve el numero de cuenta
+      return (cuentas.numeroCuenta && dinero); //Te devuelve el numero de cuenta y el saldo
     }
 /*
     public CambiarPin(Number pin){
