@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * @brief Classe appBankMain 
+ * @brief Classe appBankMain
  * @description Programa Gestión de una entidad bancaria
  * @autor Victor Marchante, Juanjo Castillo y David Castro
  */
@@ -10,11 +10,12 @@ import java.util.Scanner;
 public class appBankMain {
 
     public static void main(String[] args) {
-        
+
         Scanner input = new Scanner(System.in).useDelimiter("\n");
         String numCuenta;
         String nifCliente;
         String tipoCuenta;
+        String saldo;
 
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 
@@ -30,7 +31,7 @@ public class appBankMain {
 
 
         int opcion0;
-        
+
         //Menu
         do {
             System.out.println("#######  MENU  #######");
@@ -58,16 +59,35 @@ public class appBankMain {
                     el saldo del tipo de cuenta que sea CA/CC sin pasarlo explicitamente. */
 
                     for (int i = 0; i < cuentas.size(); i++) {
+
                         if (numCuenta.equals(cuentas.get(i).getNumCuenta())) {
                             index1 = i;
-                        }
-                    }
+                            System.out.println(cuentas.get(index1).getSaldo());
+                            }
+                        //Mira todas las cuentas y si no es la correcta te muestra el system.out
+                       /* if(numCuenta != cuentas.get(i).getNumCuenta()){
+                            System.out.println("No es la cuenta solicitada");
+                            index1= i;
 
-                    System.out.println(cuentas.get(index1).getSaldo());
-
+                        }*/
+                           }
                     break;
                 case 2:
 
+                    int index2 = -1;
+                    System.out.println("#######  HACER DIPOSITO  #######");
+                    System.out.println("Introduzca el numero de cuenta:");
+                    numCuenta = input.next();
+                    for (int i = 0; i < cuentas.size(); i++) {
+                        if (numCuenta.equals(cuentas.get(i).getNumCuenta())) {
+                            index2 = i;
+                        }
+                    }/*
+                    System.out.println("Cantidad que quieres dipositar:");
+                    saldo = input.next(); //Saldo esta como string
+                    //cuentas.setSaldo(saldo);
+                    System.out.println(//Mostrar nuevo saldo);
+*/
                     break;
                 case 3:
 

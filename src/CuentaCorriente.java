@@ -5,6 +5,10 @@ public class CuentaCorriente extends Cuenta implements Corriente {
         super(numCuenta, nif, saldo);
     }
 
+    public CuentaCorriente(int saldo){
+       super(saldo);
+   }
+
     public void Ponerdinero(){
     }
 
