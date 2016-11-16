@@ -15,10 +15,8 @@ public class appBankMain {
         String numCuenta;
         String nifCliente;
         String tipoCuenta;
-        String saldo;
 
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
-
         clientes.add(new Cliente ("David", "nifDavid"));
         clientes.add(new Cliente ("Juanjo", "nifJuanjo"));
         clientes.add(new Cliente ("Victor", "nifVictor"));
@@ -34,14 +32,17 @@ public class appBankMain {
 
         //Menu
         do {
+            System.out.println("\n");
+            System.out.println("######################");
             System.out.println("#######  MENU  #######");
+            System.out.println("######################");
             System.out.println("Elija una opción:");
             System.out.println("1 - Ver saldo de una cuenta:");
             System.out.println("2 - Hacer un deposito:");
             System.out.println("3 - Hacer una extracción:");
             System.out.println("4 - Crear cuenta");
             System.out.println("5 - Eliminar cuenta:");
-            System.out.println("6 - Ver sucursales:");
+            /* System.out.println("6 - Ver sucursales:"); */
             System.out.println("0 - Salir");
 
             opcion0 = input.nextInt();
@@ -52,7 +53,7 @@ public class appBankMain {
 
                     int index1 = -1;
                     System.out.println("#######  VER SALDO  #######");
-                    System.out.println("Introduzca el numero de cuenta:");
+                    System.out.println("Introduzca el número de cuenta:");
                     numCuenta = input.next();
 
                     /*Llamamos al metodo verSaldo de Cuenta, mediante polimorfismo nos mostrará
@@ -62,34 +63,53 @@ public class appBankMain {
 
                         if (numCuenta.equals(cuentas.get(i).getNumCuenta())) {
                             index1 = i;
-                            System.out.println(cuentas.get(index1).getSaldo());
-                            }
+                            System.out.println("El saldo en la cuenta es: " + cuentas.get(index1).getSaldo());
+                        }
                         //Mira todas las cuentas y si no es la correcta te muestra el system.out
-                       /* if(numCuenta != cuentas.get(i).getNumCuenta()){
+                        /*
+                        if(numCuenta != cuentas.get(i).getNumCuenta()){
                             System.out.println("No es la cuenta solicitada");
                             index1= i;
-
-                        }*/
-                           }
+                        }
+                        */
+                    }
                     break;
                 case 2:
 
                     int index2 = -1;
-                    System.out.println("#######  HACER DIPOSITO  #######");
-                    System.out.println("Introduzca el numero de cuenta:");
+                    int deposito2 = 0;
+                    System.out.println("#######  HACER DEPOSITO  #######");
+                    System.out.println("Introduzca el número de cuenta:");
                     numCuenta = input.next();
                     for (int i = 0; i < cuentas.size(); i++) {
                         if (numCuenta.equals(cuentas.get(i).getNumCuenta())) {
                             index2 = i;
                         }
-                    }/*
+                    }
+                    System.out.println("El saldo en la cuenta es: " + cuentas.get(index2).getSaldo());
                     System.out.println("Cantidad que quieres dipositar:");
-                    saldo = input.next(); //Saldo esta como string
-                    //cuentas.setSaldo(saldo);
-                    System.out.println(//Mostrar nuevo saldo);
-*/
+                    deposito2 = Integer.parseInt(input.next());
+                    cuentas.get(index2).setDeposito(deposito2);
+                    System.out.println("El saldo en la cuenta es: " + cuentas.get(index2).getSaldo());
+
                     break;
                 case 3:
+
+                    int index3 = -1;
+                    int extraccion = 0;
+                    System.out.println("#######  HACER UNA EXTRACCIÓN  #######");
+                    System.out.println("Introduzca el número de cuenta:");
+                    numCuenta = input.next();
+                    for (int i = 0; i < cuentas.size(); i++) {
+                        if (numCuenta.equals(cuentas.get(i).getNumCuenta())) {
+                            index3 = i;
+                        }
+                    }
+                    System.out.println("El saldo en la cuenta es: " + cuentas.get(index3).getSaldo());
+                    System.out.println("Cantidad que quieres extraer:");
+                    extraccion = Integer.parseInt(input.next());
+                    cuentas.get(index3).setExtraccion(extraccion);
+                    System.out.println("El saldo en la cuenta es: " + cuentas.get(index3).getSaldo());
 
                     break;
                 case 4:

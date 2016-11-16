@@ -40,11 +40,18 @@ public abstract class Cuenta {
         this.nif = nif;
     }
 
-    public void Ponerdinero(){
+    public void setDeposito(int deposito){
+        int saldoTemp = getSaldo();
+        saldoTemp += deposito;
+        setSaldo(saldoTemp);
     }
 
-    public void MostrarDinero(){
+    public void setExtraccion(int extraccion){
+        int saldoTemp = getSaldo();
+        saldoTemp -= extraccion;
+        setSaldo(saldoTemp);
     }
+
 
     @Override
     public boolean equals(Object obj){
