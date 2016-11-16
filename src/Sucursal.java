@@ -1,22 +1,22 @@
 
 public class Sucursal {
 
-    public Number numSucursal;
-    public String codigoId;
+    private String numSucursal = "0000";
+    private String nombreSucursal;
 
-    public Number getNumSucursal() {
+    public String getNumSucursal() {
         return numSucursal;
     }
 
-    public void setNumSucursal(Number numSucursal) {
+    public void setNumSucursal(String numSucursal) {
         this.numSucursal = numSucursal;
     }
 
-    public String getCodigoId() {
-        return codigoId;
+    public String getNombreSucursal() {
+        return nombreSucursal;
     }
 
-    public void setCodigoId(String codigoId) {
-        this.codigoId = codigoId;
+    public void setNombreSucursal(String nombreSucursal) {
+        this.nombreSucursal = nombreSucursal;
     }
 }
