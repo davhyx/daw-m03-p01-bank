@@ -33,3 +33,5 @@
 .idea/vcs.xml
 .idea/modules.xml
 daw-m03-p01-bank.iml
+/Banco/nbproject/private/
+/Banco/build/

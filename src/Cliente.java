@@ -3,7 +3,13 @@ public class Cliente {
 
     public String nombre;
     public String nif;
+    public String numeroCuenta;
     /*private Number pin;*/
+
+    public Cliente(String nombre, String nif){
+        this.nombre = nombre;
+        this.nif = nif;
+    }
 
     public String getNombre() {
         return nombre;
@@ -30,22 +36,24 @@ public class Cliente {
     }
     */
 
-    public CrearCuenta(String numeroCuenta, String nif){ //Metodo Crear Cuenta le pasas el numero de Cuenta y el titular
+
+    public void CrearCuenta(String numeroCuenta, String nif){ //Metodo Crear Cuenta le pasas el numero de Cuenta y el titular
       this.numeroCuenta = numeroCuenta;
       this.nif = nif;
-      cuentas.add(numeroCuenta,nif); //Le añades a la ARRAyLIST cuentas la cuenta y el titular
+      //cuentas.add(numeroCuenta,nif); //Le añades a la ARRAyLIST cuentas la cuenta y el titular
     }
 
-    public BajaCuenta(String numeroCuenta){ //Metodo BajaCuenta le pasas la cuenta
+    public void BajaCuenta(String numeroCuenta){ //Metodo BajaCuenta le pasas la cuenta
       this.numeroCuenta = numeroCuenta;
-      this.nif = nif;
-      cuentas.remove(numeroCuenta,nif);//Eliminar
+      //cuentas.remove(numeroCuenta);//Eliminar
     }
 
-    public VerCuenta(String nombre){ //Metodo VerCuenta le pasas el nombre del cliente
-      this.nombre = nombre;
-      return (cuentas.numeroCuenta && dinero); //Te devuelve el numero de cuenta y el saldo
+    public void VerCuenta(String numeroCuenta){ //Metodo VerCuenta le pasas el nombre del cliente
+      this.numeroCuenta = numeroCuenta;
+      //return (cuentas.numeroCuenta && dinero); //Te devuelve el numero de cuenta y el saldo
+
     }
+
 /*
     public CambiarPin(Number pin){
       this.pin = pin;
