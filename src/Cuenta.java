@@ -10,11 +10,6 @@ public abstract class Cuenta {
         this.saldo = saldo;
         this.nif = nif;
     }
-
-    /*Constructor de Cuenta para pasar el Saldo*/
-       public Cuenta(int saldo){
-           this.saldo = saldo;
-       }
        
     public String getNumCuenta() {
         return numCuenta;

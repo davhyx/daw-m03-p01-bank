@@ -16,6 +16,18 @@ public class appBankMain {
         String nifCliente;
         String tipoCuenta;
 
+        do {
+            System.out.println("######################");
+            System.out.println("#######  AUTH  #######");
+            System.out.println("######################");
+            System.out.println("Identificación:");
+            System.out.println("DNI:");
+            System.out.println("0 - Salir");
+
+            }
+
+
+
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
         clientes.add(new Cliente ("David", "nifDavid"));
         clientes.add(new Cliente ("Juanjo", "nifJuanjo"));
@@ -37,7 +49,6 @@ public class appBankMain {
 
         //Menu
         do {
-            System.out.println("\n");
             System.out.println("######################");
             System.out.println("#######  MENU  #######");
             System.out.println("######################");
