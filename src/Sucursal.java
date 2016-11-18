@@ -1,16 +1,22 @@
 
 public class Sucursal {
 
+<<<<<<< HEAD
     public Number numSucursal;
+=======
+    private String numSucursal = "0000";
+    private String nombreSucursal;
+>>>>>>> origin/master
 
-    public Number getNumSucursal() {
+    public String getNumSucursal() {
         return numSucursal;
     }
 
-    public void setNumSucursal(Number numSucursal) {
+    public void setNumSucursal(String numSucursal) {
         this.numSucursal = numSucursal;
     }
 
+<<<<<<< HEAD
     public Sucursal(String numSucursal, String codigoId){
       this.numSucursal = numSucursal;
       this.codigoId = codigoId;
@@ -26,4 +32,13 @@ public boolean equals(Object obj){
   }
   return true;
 }
+=======
+    public String getNombreSucursal() {
+        return nombreSucursal;
+    }
+
+    public void setNombreSucursal(String nombreSucursal) {
+        this.nombreSucursal = nombreSucursal;
+    }
+>>>>>>> origin/master
 }
