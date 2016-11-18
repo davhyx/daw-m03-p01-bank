@@ -16,6 +16,7 @@ public class appBankMain {
         String nifCliente;
         String tipoCuenta;
 
+        String auth = "0";
         do {
             System.out.println("######################");
             System.out.println("#######  AUTH  #######");
@@ -23,9 +24,13 @@ public class appBankMain {
             System.out.println("Identificación:");
             System.out.println("DNI:");
             System.out.println("0 - Salir");
+            auth = input.next();
 
+            if(auth!="0"){
+                nifCliente = auth;
             }
 
+        }while (auth != "0");
 
 
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
