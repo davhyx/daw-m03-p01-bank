@@ -29,6 +29,11 @@ public class appBankMain {
         cuentas.add(new CuentaAhorro ("2", "nifJuanjo", 200));
         cuentas.add(new CuentaCorriente ("3", "nifVictor", 300));
 
+        ArrayList<Sucursal> sucursales = new ArrayList<Sucursales>();
+        sucursales.add(new Sucursal ("01", "1E24"));
+        sucursales.add(new Sucursal ("02", "0E23"));
+
+
 
         int opcion0;
 
@@ -114,8 +119,24 @@ public class appBankMain {
 
                     break;
                 case 5:
-
                     break;
+
+                case 6:
+
+                  int index6 = -1;
+                  System.out.println("#######  SUCURSALES  #######");
+                  System.out.println("Introduzca el numero de sucursal:");
+                  numSucursal = input.next();
+
+                  for (int i = 0; i < sucursales.size(); i++) {
+                      if (numSucursal.equals(sucursales.get(i).getNumSucursal())) {
+                          index6 = i;
+                      }
+                  }
+
+                  System.out.println(sucursales.get(index1).getNumCuenta());
+
+                  break;
                 case 0:
                     //10 - Salir
                     System.out.println("Log off");

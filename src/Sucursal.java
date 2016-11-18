@@ -2,7 +2,6 @@
 public class Sucursal {
 
     public Number numSucursal;
-    public String codigoId;
 
     public Number getNumSucursal() {
         return numSucursal;
@@ -12,11 +11,19 @@ public class Sucursal {
         this.numSucursal = numSucursal;
     }
 
-    public String getCodigoId() {
-        return codigoId;
-    }
+    public Sucursal(String numSucursal, String codigoId){
+      this.numSucursal = numSucursal;
+      this.codigoId = codigoId;
+  }
 
-    public void setCodigoId(String codigoId) {
-        this.codigoId = codigoId;
-    }
+@Override
+public boolean equals(Object obj){
+  if (this.numSucursal == obj){
+      return true;
+  }
+  if (this == null){
+      return false;
+  }
+  return true;
+}
 }
