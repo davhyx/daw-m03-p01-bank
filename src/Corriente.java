@@ -1,3 +1,3 @@
 interface Corriente{
-    void QuitarDinero();
+    public void setExtraccion(int extraccion);
 }

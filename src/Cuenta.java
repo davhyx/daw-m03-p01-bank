@@ -35,17 +35,8 @@ public abstract class Cuenta {
         this.nif = nif;
     }
 
-    public void setDeposito(int deposito){
-        int saldoTemp = getSaldo();
-        saldoTemp += deposito;
-        setSaldo(saldoTemp);
-    }
-
-    public void setExtraccion(int extraccion){
-        int saldoTemp = getSaldo();
-        saldoTemp -= extraccion;
-        setSaldo(saldoTemp);
-    }
+    public void setDeposito(int deposito){}
+    public void setExtraccion(int extraccion){}
 
 
     @Override
@@ -58,5 +49,7 @@ public abstract class Cuenta {
         }
         return true;
     }
+    @Override
+    public abstract String toString();
 
 }

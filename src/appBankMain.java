@@ -16,6 +16,7 @@ public class appBankMain {
         String nifCliente;
         String tipoCuenta;
 
+        /*
         String auth = "0";
         do {
             System.out.println("######################");
@@ -31,7 +32,7 @@ public class appBankMain {
             }
 
         }while (auth != "0");
-
+*/
 
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
         clientes.add(new Cliente ("David", "nifDavid"));
@@ -44,7 +45,7 @@ public class appBankMain {
         cuentas.add(new CuentaAhorro ("2", "nifJuanjo", 200));
         cuentas.add(new CuentaCorriente ("3", "nifVictor", 300));
 
-        ArrayList<Sucursal> sucursales = new ArrayList<Sucursales>();
+        ArrayList<Sucursal> sucursales = new ArrayList<Sucursal>();
         sucursales.add(new Sucursal ("01"));
         sucursales.add(new Sucursal ("02"));
 
@@ -79,20 +80,11 @@ public class appBankMain {
 
                     /*Llamamos al metodo verSaldo de Cuenta, mediante polimorfismo nos mostrará
                     el saldo del tipo de cuenta que sea CA/CC sin pasarlo explicitamente. */
-
                     for (int i = 0; i < cuentas.size(); i++) {
-
                         if (numCuenta.equals(cuentas.get(i).getNumCuenta())) {
                             index1 = i;
                             System.out.println("El saldo en la cuenta es: " + cuentas.get(index1).getSaldo());
                         }
-                        //Mira todas las cuentas y si no es la correcta te muestra el system.out
-                        /*
-                        if(numCuenta != cuentas.get(i).getNumCuenta()){
-                            System.out.println("No es la cuenta solicitada");
-                            index1= i;
-                        }
-                        */
                     }
                     break;
                 case 2:
@@ -128,9 +120,10 @@ public class appBankMain {
                     }
                     System.out.println("El saldo en la cuenta es: " + cuentas.get(index3).getSaldo());
                     System.out.println("Cantidad que quieres extraer:");
-                    extraccion = Integer.parseInt(input.next());
+                    extraccion = input.nextInt();
+
                     cuentas.get(index3).setExtraccion(extraccion);
-                    System.out.println("El saldo en la cuenta es: " + cuentas.get(index3).getSaldo());
+                    System.out.println(cuentas.get(index3));
 
                     break;
                 case 4:
@@ -161,16 +154,7 @@ public class appBankMain {
 
                   int index6 = -1;
                   System.out.println("#######  SUCURSALES  #######");
-                  System.out.println("Introduzca el numero de sucursal:");
-                  numSucursal = input.next();
 
-                  for (int i = 0; i < sucursales.size(); i++) {
-                      if (numSucursal.equals(sucursales.get(i).getNumSucursal())) {
-                          index6 = i;
-                      }
-                  }
-
-                  System.out.println(sucursales.get(index1).getNumCuenta());
 
                   break;
                 case 0:

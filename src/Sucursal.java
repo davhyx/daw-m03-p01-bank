@@ -1,9 +1,6 @@
 
 public class Sucursal {
 
-
-    public Number numSucursal;
-
     private String numSucursal = "0000";
 
 
