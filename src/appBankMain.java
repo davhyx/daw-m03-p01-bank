@@ -15,7 +15,8 @@ public class appBankMain {
         String numCuenta;
         String nifCliente;
         String tipoCuenta;
-        String numSucursal;
+        String numSucursal; //va aqui??
+
 
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
         clientes.add(new Cliente ("David", "nifDavid"));
@@ -30,8 +31,9 @@ public class appBankMain {
 
         ArrayList<Sucursal> sucursales = new ArrayList<Sucursal>();
 
-        sucursales.add(new Sucursal ("01", "1E24"));
-        sucursales.add(new Sucursal ("02", "0E23"));
+        sucursales.add(new Sucursal ("0001"));
+        sucursales.add(new Sucursal ("0002"));
+
 
 
         int opcion0;
@@ -94,7 +96,7 @@ public class appBankMain {
                     }
                     System.out.println("El saldo en la cuenta es: " + cuentas.get(index2).getSaldo());
                     System.out.println("Cantidad que quieres dipositar:");
-                    deposito2 = Integer.parseInt(input.next());
+                    deposito2 = input.nextInt();
                     cuentas.get(index2).setDeposito(deposito2);
                     System.out.println("El saldo en la cuenta es: " + cuentas.get(index2).getSaldo());
 
@@ -113,7 +115,7 @@ public class appBankMain {
                     }
                     System.out.println("El saldo en la cuenta es: " + cuentas.get(index3).getSaldo());
                     System.out.println("Cantidad que quieres extraer:");
-                    extraccion = Integer.parseInt(input.next());
+                    extraccion = input.nextInt();
                     cuentas.get(index3).setExtraccion(extraccion);
                     System.out.println("El saldo en la cuenta es: " + cuentas.get(index3).getSaldo());
 
@@ -156,7 +158,7 @@ public class appBankMain {
                         }
                     }
 
-                    System.out.println(sucursales.get(index6).getCodigoId());
+                    System.out.println(sucursales.get(index6));
 
                     break;
                 case 0:

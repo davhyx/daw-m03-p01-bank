@@ -4,10 +4,12 @@ public class Sucursal {
     private String numSucursal = "0000";
     private String nombreSucursal;
 
-    public Sucursal(String numSucursal, String codigoId){
+
+
+    public Sucursal(String numSucursal){
         this.numSucursal = numSucursal;
-        this.codigoId = codigoId;
     }
+
 
     public String getNumSucursal() {
         return numSucursal;
@@ -23,6 +25,7 @@ public class Sucursal {
 
     public void setNombreSucursal(String nombreSucursal) {
         this.nombreSucursal = nombreSucursal;
+
     }
 
     @Override
