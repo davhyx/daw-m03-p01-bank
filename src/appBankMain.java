@@ -28,7 +28,7 @@ public class appBankMain {
         cuentas.add(new CuentaCorriente ("3", "nifVictor", 300));
 
         ArrayList<Sucursal> sucursales = new ArrayList<Sucursales>();
-        sucursales.add(new Sucursal ("01", ));
+        sucursales.add(new Sucursal ("01"));
         sucursales.add(new Sucursal ("02"));
 
 
